@@ -1,7 +1,13 @@
 import { Box, Button, Stack, Typography } from "@mui/material";
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import homePage from "./home-page.jpg";
 
 export default function OrgazineButton() {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/contact");
+  };
   return (
     <div>
       <Stack
@@ -9,31 +15,58 @@ export default function OrgazineButton() {
         spacing={5}
         sx={{ marginLeft: "1.5rem", marginTop: "3rem" }}
       >
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <img
+            src={homePage}
+            alt="homePage"
+            style={{
+              width: "800px",
+              height: "400px",
+              marginRight: "20px",
+              marginTop: "25px",
+            }}
+          />
+        </div>
+
         <Box
           sx={{
-            width: 300,
-            height: 300,
-            backgroundColor: "primary.dark",
-            "&:hover": {
-              backgroundColor: "primary.main",
-              opacity: [0.9, 0.8, 0.7],
-            },
-          }}
-        />
-        <Box
-          sx={{
-            width: 500,
-            height: 300,
-            backgroundColor: "primary.dark",
+            width: 800,
+            height: 400,
+            backgroundColor: "#102444", //home page box color -- background set as main color ! //
             borderRadius: "30px",
+            transform: "translateY(0px)",
           }}
         >
-          <Typography sx={{color: 'white', textAlign: 'right', fontSize: '40px', padding: '10px 20px 10px 10px'}}>
+          <Typography
+            sx={{
+              color: "white",
+              textAlign: "right",
+              fontSize: "50px",
+              padding: "30px 50px 20px 30px",
+            }}
+          >
             Опознай България! Избери следващата си дестинация.
           </Typography>
-          <Button variant="outlined" color="secondary" sx={{color: 'white', marginLeft: '13rem', borderRadius: '50px', pointerEventsevents: 'none'}}>
-          Организирай пътуването си
-            </Button>
+          <Button
+            variant="outlined"
+            sx={{
+              color: "#fff",
+              marginLeft: "20rem",
+              borderRadius: "90px",
+              marginTop: "10px",
+              fontSize: "16px",
+              borderWidth: "5px", ///problem  whit hover, pls solve it !
+              borderColor: "#fff",
+
+              pointerEvents: "visibleFill",
+              "&:hover": {
+                backgroundColor: "transparent",
+              },
+            }}
+            onClick={handleClick}
+          >
+            Организирай пътуването си
+          </Button>
         </Box>
       </Stack>
     </div>
