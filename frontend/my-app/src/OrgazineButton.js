@@ -57,10 +57,11 @@ export default function OrgazineButton() {
               fontSize: "16px",
               borderWidth: "5px", ///problem  whit hover, pls solve it !
               borderColor: "#fff",
-
+              
               pointerEvents: "visibleFill",
               "&:hover": {
-                backgroundColor: "transparent",
+                borderWidth: "5px", 
+              borderColor: "#fff"
               },
             }}
             onClick={handleClick}

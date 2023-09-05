@@ -101,7 +101,7 @@ export default function Navbar() {
             <Box
               sx={{
                 flexGrow: 1,
-                width: "400px", //popravi
+                width: "10rem", //popravi
                 display: { xs: "none", md: "flex" },
                 backgroundColor: "#102444",
                 borderRadius: "35px",
