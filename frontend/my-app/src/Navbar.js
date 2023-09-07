@@ -13,12 +13,24 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import PersonIcon from "@mui/icons-material/Person";
 import logo from "./logo.png";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const pages = ["Начало", "Дестинации", "Форум", "За нас", "Контакти"];
   const settings = ["Profile", "Account", "Dashboard", "Logout"];
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+  const navigate = useNavigate()
+
+  const handleClick = (e) => {
+    console.log(e.target.innerText)
+    if (e.target.innerText.toLowerCase() === "Контакти".toLowerCase()){
+      navigate('/contact')
+    }else{
+      navigate('/nopage')
+    }
+  }
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -113,7 +125,7 @@ export default function Navbar() {
               {pages.map((page) => (
                 <Button
                   key={page}
-                  onClick={handleCloseNavMenu}
+                  onClick={handleClick} //onclik event
                   sx={{ my: 2, color: "white", display: "block" }}
                 >
                   {page}
