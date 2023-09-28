@@ -10,3 +10,9 @@ background-color: white;
     height: 3rem;
     width: 15rem;
 }
+
+.verticalLine {
+    border-left: 1px solid #ccc;
+    height: 100%;
+    margin: 0 16px
+  } 

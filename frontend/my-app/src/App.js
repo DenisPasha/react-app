@@ -4,6 +4,8 @@ import NoPage from "./NoPage";
 import Contact from "./Contact";
 import Navbar from "./Navbar";
 import SingIn from "./SingIn";
+import Dashboard from "./Dashboard";
+import Profile from "./Profile";
 
 
 function App() {
@@ -14,6 +16,8 @@ function App() {
         <Route index element={<Home />}/>
         <Route path="/contact" element={<Contact />}/>
         <Route path="/login" element={<SingIn/>}/>
+        <Route path="/profile" element={<Profile/>}/>
+        <Route path="/dashboard" element={<Dashboard/>}/>
         <Route path="*" element={<NoPage />} />
       </Routes>
     </BrowserRouter>
