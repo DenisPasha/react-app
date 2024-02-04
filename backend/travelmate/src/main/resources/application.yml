@@ -28,7 +28,7 @@ spring:
     driverClassName: com.mysql.cj.jdbc.Driver
     #  change localhost with database-container to use it in docker
 #    change DB
-    url: "jdbc:mysql://localhost:3306/novini_App?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true&serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8"
+    url: "jdbc:mysql://localhost:3306/travel_mate?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true&serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8"
     username: root
     password: 125963Denis
 
